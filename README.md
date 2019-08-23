@@ -1,4 +1,3 @@
-Title: Rahul is Dead - For a Better World
 # Rahul is Dead
 ### For a Better World
 
