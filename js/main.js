@@ -272,27 +272,7 @@
                         '<div class="mfp-title mfp-bottom-iframe-title"></div>'+
                       '</div>', // HTML markup of popup, `mfp-close` will be replaced by the close button
 
-                patterns: {
-                    youtube: {
-                      index: 'youtube.com/', // String that detects type of video (in this case YouTube). Simply via url.indexOf(index).
-
-                      id: null, // String that splits URL in a two parts, second part should be %id%
-                      // Or null - full URL will be returned
-                      // Or a function that should return %id%, for example:
-                      // id: function(url) { return 'parsed id'; }
-
-                      src: '%id%?autoplay=1' // URL that will be set as a source for iframe.
-                    },
-                    vimeo: {
-                      index: 'vimeo.com/',
-                      id: '/',
-                      src: '//player.vimeo.com/video/%id%?autoplay=1'
-                    },
-                    gmaps: {
-                      index: '//maps.google.',
-                      src: '%id%&output=embed'
-                    }
-                },
+ 
 
                 srcAction: 'iframe_src', // Templating object key. First part defines CSS selector, second attribute. "iframe_src" means: find "iframe" and set attribute "src".
             },
@@ -302,14 +282,6 @@
                  values.title = item.el.attr('title');
                 }
             },
-        });
-
-        //Google Maps
-        $("#map").googleMap({
-            zoom: 16 // Google Map ZOOM. You can change this value
-        });
-        $("#map").addMarker({
-            address: "S601 Townsend Street, San Francisco, California, USA", // Your Address. Change it
         });
     });
 
